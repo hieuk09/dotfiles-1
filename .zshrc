@@ -44,11 +44,10 @@ export EC2_CERT=~/.ec2/cert-XUYVOZGS6BUUF76DR3VVA2OTF7FOABVZ.pem
 export AWS_ACCESS_KEY_ID=AKIAIGZQPWQTIWGO5VDQ
 export AWS_SECRET_ACCESS_KEY=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
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/tienle/.rvm/bin
-export BUNDLER_EDITOR=mvim
+export BUNDLER_EDITOR=vim
 
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 cdpath=(. $HOME/code $HOME/fun )
-__rvm_project_rvmrc
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
