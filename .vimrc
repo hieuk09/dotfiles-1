@@ -60,6 +60,7 @@ Bundle 'Rainbow-Parenthesis'
 Bundle 'groenewege/vim-less'
 "Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 Bundle 'rizzatti/dash.vim'
+Bundle 'slim-template/vim-slim'
 
 "-----------------------------------------------------------------------------
 " General
