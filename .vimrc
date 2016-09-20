@@ -1,66 +1,57 @@
 set nocompatible
 
-"-----------------------------------------------------------------------------
-" Vundle
-"-----------------------------------------------------------------------------
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
 
-Bundle 'gmarik/vundle'
+call plug#begin('~/.vim/plugged')
 
 " My Bundles here:
 "
 " original repos on github
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-"Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-pathogen'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-repeat'
-Bundle 'godlygeek/tabular'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'leshill/vim-json'
-Bundle 'kana/vim-textobj-user'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'vim-scripts/ZoomWin'
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'vim-scripts/greplace.vim'
-Bundle 'vim-scripts/globalreplace.vim'
-Bundle 'itspriddle/vim-jquery'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'snipmate-snippets'
-Bundle 'garbas/vim-snipmate'
-Bundle 'kien/ctrlp.vim'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'rking/ag.vim'
-Bundle 'vim-ruby/vim-ruby'
-"Bundle 'wincent/Command-T'
-Bundle 'tienle/vim-itermux'
-Bundle 'ervandew/supertab'
-Bundle 'sjl/gundo.vim'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'Lokaltog/vim-powerline'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-pathogen'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-haml'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-repeat'
+Plug 'godlygeek/tabular'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'pangloss/vim-javascript'
+Plug 'kchmck/vim-coffee-script'
+Plug 'leshill/vim-json'
+Plug 'kana/vim-textobj-user'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'vim-scripts/ZoomWin'
+Plug 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/greplace.vim'
+Plug 'vim-scripts/globalreplace.vim'
+Plug 'itspriddle/vim-jquery'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'snipmate-snippets'
+Plug 'garbas/vim-snipmate'
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'rking/ag.vim'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tienle/vim-itermux'
+Plug 'ervandew/supertab'
+Plug 'sjl/gundo.vim'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'vim-scripts/L9'
+Plug 'vim-scripts/vis'
+Plug 'vim-scripts/YankRing.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'vim-scripts/Rainbow-Parenthesis'
+Plug 'groenewege/vim-less'
+Plug 'rizzatti/dash.vim'
+Plug 'slim-template/vim-slim'
+Plug 'tpope/vim-rails'
 
-" vim-scripts repos
-Bundle 'L9'
-Bundle 'vis'
-Bundle 'bocau'
-Bundle 'YankRing.vim'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'Rainbow-Parenthesis'
-Bundle 'groenewege/vim-less'
-"Bundle 'jeffkreeftmeijer/vim-numbertoggle'
-Bundle 'rizzatti/dash.vim'
-Bundle 'slim-template/vim-slim'
+call plug#end()
 
 "-----------------------------------------------------------------------------
 " General
@@ -327,22 +318,7 @@ cnoremap <C-F> <C-R>=expand('%:p:h')<CR>
 nnoremap gG :OpenURL http://www.google.com/search?q=<cword><CR>
 nnoremap gA :Ag! <cword><CR>
 
-let g:ctrlp_map = '<Leader><Space>'
-"let g:ctrlp_working_path_mode = 2
-let g:ctrlp_match_window_bottom = 0
-let g:ctrlp_match_window_reversed = 0
 let MRU_Max_Entries = 400
-
-nnoremap <silent> <F4> <Esc>:ClearCtrlPCache<CR>
-nnoremap <silent> <F3> :TlistToggle<CR>
-nnoremap <Leader>u :ClearCtrlPCache<CR>
-nnoremap <Leader>j :CtrlPMRU<CR>
-nnoremap <Leader>b :CtrlPBuffer<CR>
-nnoremap <Leader><Leader> <C-^>
-nnoremap <leader>ec :CtrlP app/controllers<cr>
-nnoremap <leader>es :CtrlP spec/<cr>
-nnoremap <leader>em :CtrlP app/models<cr>
-nnoremap <leader>ev :CtrlP app/views<cr>
 
 nnoremap <F5> :GundoToggle<CR>
 
@@ -495,6 +471,8 @@ let g:rbpt_colorpairs = [
     \ ['darkred',     'DarkOrchid3'],
     \ ['red',         'firebrick3'],
     \ ]
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
@@ -540,3 +518,5 @@ au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
 au BufNewFile,BufReadPost *.scss setl foldmethod=indent
 au BufNewFile,BufReadPost *.sass setl foldmethod=indent
 au BufRead,BufNewFile *.scss set filetype=scss
+
+map <leader>o :Files<CR>

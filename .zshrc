@@ -43,7 +43,8 @@ export EC2_PRIVATE_KEY=~/.ec2/pk-XUYVOZGS6BUUF76DR3VVA2OTF7FOABVZ.pem
 export EC2_CERT=~/.ec2/cert-XUYVOZGS6BUUF76DR3VVA2OTF7FOABVZ.pem
 export AWS_ACCESS_KEY_ID=AKIAIGZQPWQTIWGO5VDQ
 export AWS_SECRET_ACCESS_KEY=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
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:$PATH
+export GOPATH=~/go
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:$GOPATH/bin:$PATH
 export BUNDLER_EDITOR=vim
 
 cdpath=(. $HOME/code $HOME/fun )
@@ -52,3 +53,5 @@ cdpath=(. $HOME/code $HOME/fun )
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
