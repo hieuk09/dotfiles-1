@@ -14,6 +14,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 brew install fzf
 brew install vim
+brew install reattach-to-user-namespace
 ```
 
 Open Vim and type `:PlugInstall`
