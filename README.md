@@ -30,7 +30,9 @@ Install other necessary apps
 
 ```shell
 brew install git mysql mysql56 redis gcc fzf tmux vim the_silver_searcher reattach-to-user-namespace
-brew cask install google-chrome skype vlc virtualbox sublime-text java
+brew install imagemagick@6
+brew link imagemagick@6 --force
+brew cask install google-chrome skype vlc virtualbox sublime-text java slack
 ```
 
 Install Oh-my-zsh
