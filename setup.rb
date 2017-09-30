@@ -19,7 +19,7 @@ end
 
 def install_necessary_apps
   install_dependencies
-  system('brew install git mysql mysql56 redis gcc fzf tmux vim the_silver_searcher reattach-to-user-namespace node nvm')
+  system('brew install git mysql mysql56 redis gcc fzf tmux vim the_silver_searcher reattach-to-user-namespace node nvm heroku')
   system('brew install imagemagick@6 qt@5.5')
   system('brew link imagemagick@6 --force')
   system('brew link qt@5.5 --force')
