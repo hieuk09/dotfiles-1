@@ -13,6 +13,12 @@ Download `setup.rb` in this repo. Then run
 ruby setup.rb
 ```
 
+Install Xcode from AppStore, then run
+
+```shell
+sudo xcodebuild -license
+```
+
 Add Vietnamese input methods, Enable changing input method on login screen (System preferences -> Users -> Login options)
 
 Setup VIM
