@@ -10,7 +10,7 @@ ZSH_THEME="robbyrussell"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim=/usr/local/Cellar/vim/8.0.0456/bin/vim
+alias vim=/usr/local/Cellar/vim/8.0.1150/bin/vim
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -56,3 +56,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$HOME/.yarn/bin:$PATH"
