@@ -14,8 +14,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-haml'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-repeat'
 Plug 'godlygeek/tabular'
 Plug 'pangloss/vim-javascript'
 Plug 'kchmck/vim-coffee-script'
@@ -29,15 +27,14 @@ Plug 'rking/ag.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tienle/vim-itermux'
 Plug 'ervandew/supertab'
-Plug 'kien/rainbow_parentheses.vim'
 Plug 'vim-scripts/vis'
 Plug 'altercation/vim-colors-solarized'
-Plug 'vim-scripts/Rainbow-Parenthesis'
 Plug 'groenewege/vim-less'
 Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-rails'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'vim-scripts/matchit.zip'
+Plug 'elixir-editors/vim-elixir'
 
 call plug#end()
 
@@ -350,10 +347,6 @@ let g:rbpt_colorpairs = [
     \ ]
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
 
 "  ---------------------------------------------------------------------------
 "  When vimrc, either directly or via symlink, is edited, automatically reload it
