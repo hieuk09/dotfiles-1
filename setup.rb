@@ -23,7 +23,8 @@ def install_necessary_apps
   system('brew install imagemagick@6 qt@5.5')
   system('brew link imagemagick@6 --force')
   system('brew link qt@5.5 --force')
-  system('brew cask install google-chrome skype vlc virtualbox sublime-text java slack starcraft chromium postgres')
+  system('brew cask install google-chrome skype vlc virtualbox sublime-text java slack starcraft chromium')
+  system('brew cask install rowanj-gitx postgres'
 end
 
 def install_zsh
