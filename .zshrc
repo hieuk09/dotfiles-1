@@ -10,7 +10,7 @@ ZSH_THEME="robbyrussell"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim=/usr/local/Cellar/vim/8.0.1150/bin/vim
+alias vim=/usr/local/Cellar/vim/8.1.1400_2/bin/vim
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -62,3 +62,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH="$HOME/.yarn/bin:$PATH"
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
