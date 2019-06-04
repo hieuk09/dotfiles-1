@@ -9,6 +9,7 @@ end
 
 def install_homebrew_cask
   system('brew tap caskroom/cask')
+  system('brew tap homebrew/cask-versions')
   system('export HOMEBREW_CASK_OPTS="--appdir=/Applications"')
 end
 
