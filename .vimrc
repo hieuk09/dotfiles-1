@@ -11,7 +11,6 @@ Plug 'Lokaltog/vim-powerline'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-haml'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-fugitive'
 Plug 'godlygeek/tabular'
@@ -27,11 +26,10 @@ Plug 'tienle/vim-itermux'
 Plug 'ervandew/supertab'
 Plug 'vim-scripts/vis'
 Plug 'altercation/vim-colors-solarized'
-Plug 'groenewege/vim-less'
-Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-rails'
 Plug 'vim-scripts/matchit.zip'
-Plug 'elixir-editors/vim-elixir'
+Plug 'google/vim-jsonnet'
+Plug 'williamboman/mason.nvim'
 
 call plug#end()
 
@@ -96,7 +94,10 @@ set guioptions=aegitcm
 "win 180 50
 set mousehide                         " hide mouse after chars typed
 set mouse=a                           " mouse in all modes
-set ttymouse=xterm
+
+if !has('nvim')
+  set ttymouse=xterm2
+endif
 
 map <M-Esc>[62~ <ScrollWheelUp>
 map! <M-Esc>[62~ <ScrollWheelUp>
@@ -219,13 +220,6 @@ nnoremap <Esc> :noh<CR><Esc>
 nnoremap Y y$
 
 "-----------------------------------------------------------------------------
-" Auto commands
-"-----------------------------------------------------------------------------
-" Edit .vimrc
-au! BufRead,BufNewFile *.haml setfiletype haml
-au! BufRead,BufNewFile *.hamlc setfiletype haml
-
-"-----------------------------------------------------------------------------
 " Ruby related
 "-----------------------------------------------------------------------------
 compiler rubyunit
@@ -275,14 +269,6 @@ autocmd! bufwritepost vimrc source %
 "  Other files to consider Ruby
 "  ---------------------------------------------------------------------------
 au BufRead,BufNewFile Gemfile,Rakefile,Thorfile,config.ru,Vagrantfile,Guardfile,Capfile set ft=ruby
-
-
-"  ---------------------------------------------------------------------------
-"  CoffeeScript
-"  ---------------------------------------------------------------------------
-
-let coffee_compile_vert = 1
-au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
 
 "  ---------------------------------------------------------------------------
 "  SASS / SCSS

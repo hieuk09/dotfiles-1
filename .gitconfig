@@ -1,6 +1,6 @@
 [user]
-  name = Hieu Nguyen
-  email = hieuk09@gmail.com
+	name = Hieu Nguyen
+	email = hieuk09@gmail.com
 [alias]
   ci = commit
   co = checkout
@@ -28,5 +28,8 @@
   trustExitCode = true
 [core]
   editor = vim
-
-
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
