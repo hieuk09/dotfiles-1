@@ -12,7 +12,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-fugitive'
 Plug 'godlygeek/tabular'
 Plug 'pangloss/vim-javascript'
 Plug 'kchmck/vim-coffee-script'
@@ -30,6 +29,16 @@ Plug 'tpope/vim-rails'
 Plug 'vim-scripts/matchit.zip'
 Plug 'google/vim-jsonnet'
 Plug 'williamboman/mason.nvim'
+Plug 'github/copilot.vim'
+Plug 'jlcrochet/vim-rbs'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" git support
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/gv.vim'
+Plug 'sodapopcan/vim-twiggy'
+Plug 'kristijanhusak/vim-create-pr'
 
 call plug#end()
 
@@ -198,8 +207,6 @@ imap <M-"> <Esc>ci"
 vnoremap < <gv
 vnoremap > >gv
 
-map <Leader>nt :NERDTreeToggle<CR>
-
 imap jj <Esc>
 
 nnoremap gA :Ag! <cword><CR>
@@ -279,3 +286,7 @@ au BufNewFile,BufReadPost *.sass setl foldmethod=indent
 au BufRead,BufNewFile *.scss set filetype=scss
 
 map <leader>o :Files<CR>
+map <leader>g :Twiggy<CR>
+map <Leader>nt :NERDTreeToggle<CR>
+
+hi Pmenu ctermbg=black ctermfg=white
