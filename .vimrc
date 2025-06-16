@@ -2,7 +2,7 @@ set nocompatible
 
 filetype off
 
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 
 " My Bundles here:
 "
@@ -14,11 +14,11 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-bundler'
 Plug 'godlygeek/tabular'
 Plug 'pangloss/vim-javascript'
-Plug 'kchmck/vim-coffee-script'
 Plug 'leshill/vim-json'
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'rking/ag.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tienle/vim-itermux'
@@ -39,6 +39,8 @@ Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 Plug 'sodapopcan/vim-twiggy'
 Plug 'kristijanhusak/vim-create-pr'
+Plug 'udalov/kotlin-vim'
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
@@ -290,3 +292,9 @@ map <leader>g :Twiggy<CR>
 map <Leader>nt :NERDTreeToggle<CR>
 
 hi Pmenu ctermbg=black ctermfg=white
+
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'ruby': ['rubocop'],
+\}
